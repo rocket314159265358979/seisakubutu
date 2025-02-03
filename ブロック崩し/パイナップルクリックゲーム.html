@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>パイナップルクリックゲーム</title>
+    <style>
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #pineapple {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        #money {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        #upgradeButton {
+            padding: 5px 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #level {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        #clicks {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="pineapple">🍍</div>
+    <div id="money">お金: 0</div>
+    <button id="upgradeButton">攻撃力アップグレード (コスト: 10)</button>
+    <div id="level">レベル: 1</div>
+    <div id="clicks">クリック回数: 0</div>
+</div>
+
+<script>
+    let money = 0;
+    let damage = 1;
+    let upgradeCost = 10;
+    let level = 1;
+    let clicks = 0;
+    let levelThreshold = 10;
+
+    const pineapple = document.getElementById('pineapple');
+    const moneyDisplay = document.getElementById('money');
+    const upgradeButton = document.getElementById('upgradeButton');
+    const levelDisplay = document.getElementById('level');
+    const clickDisplay = document.getElementById('clicks');
+
+    pineapple.addEventListener('click', function() {
+        clicks++;
+        money += damage;
+        moneyDisplay.textContent = 'お金: ' + money;
+        clickDisplay.textContent = 'クリック回数: ' + clicks;
+        if (clicks >= levelThreshold) {
+            level++;
+            levelThreshold += 10;
+            upgradeCost = damage * 10;
+            upgradeButton.textContent = '攻撃力アップグレード (コスト: ' + upgradeCost + ')';
+            levelDisplay.textContent = 'レベル: ' + level;
+            clicks = 0;
+            upgradeDamage();
+        }
+    });
+
+    upgradeButton.addEventListener('click', function() {
+        if (money >= upgradeCost) {
+            money -= upgradeCost;
+            moneyDisplay.textContent = 'お金: ' + money;
+            damage++;
+            upgradeCost = damage * 10;
+            upgradeButton.textContent = '攻撃力アップグレード (コスト: ' + upgradeCost + ')';
+            upgradeDamage();
+        } else {
+            alert('お金が足りません！');
+        }
+    });
+
+    function upgradeDamage() {
+        pineapple.style.fontSize = damage * 4 + 'px';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>確率が低い名前当てゲーム</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function roll() {
+            let randomNumber = Math.random();
+            let name = "";
+
+            if (randomNumber < 0.0009765625) { name = "龍刃"; }
+            else if (randomNumber < 0.00146484375) { name = "神威剣"; }
+            else if (randomNumber < 0.00173828125) { name = "紅蓮剣"; }
+            else if (randomNumber < 0.001883125) { name = "天鎧剣"; }
+            else if (randomNumber < 0.0019555664) { name = "真実剣"; }
+            else if (randomNumber < 0.001987793) { name = "焔剣"; }
+            else if (randomNumber < 0.0019993093) { name = "妖刀・血楓"; }
+            else if (randomNumber < 0.00199985504) { name = "不滅剣"; }
+            else if (randomNumber < 0.00199997327) { name = "雷神剣"; }
+            else if (randomNumber < 0.00199999332) { name = "神速剣"; }
+	    else if (randomNumber < 0.00199999833) { name = "暗黒剣"; }
+  	    else if (randomNumber < 0.00199999958) { name = "咆哮剣"; }
+   	    else if (randomNumber < 0.00199999986) { name = "絶対剣"; }
+  	    else if (randomNumber < 0.00199999995) { name = "狂乱剣"; }
+  	    else if (randomNumber < 0.00199999999) { name = "疾風剣"; }
+   	    else if (randomNumber < 0.00200000001) { name = "青銀剣"; }
+  	    else if (randomNumber < 0.00200000005) { name = "氷炎剣"; }
+  	    else if (randomNumber < 0.00200000007) { name = "闇影剣"; }
+  	    else if (randomNumber < 0.002000000085) { name = "月下剣"; }
+   	    else if (randomNumber < 0.00200000009) { name = "輝光剣"; }
+  	    else if (randomNumber < 0.002000000095) { name = "宿命剣"; }
+ 	    else if (randomNumber < 0.0020000001) { name = "破邪剣"; }
+	    else if (randomNumber < 0.002000000105) { name = "幽鬼剣"; }
+	    else if (randomNumber < 0.00200000011) { name = "碧空剣"; }
+	    else if (randomNumber < 0.002000000115) { name = "光輪剣"; }
+	    else if (randomNumber < 0.00200000012) { name = "紅蓮剣"; }
+	    else if (randomNumber < 0.002000000125) { name = "剣舞剣"; }
+	    else if (randomNumber < 0.00200000013) { name = "氷華剣"; }
+	    else if (randomNumber < 0.002000000135) { name = "黒刃剣"; }
+	    else if (randomNumber < 0.00200000014) { name = "千幻剣"; }
+	    else if (randomNumber < 0.002000000145) { name = "夢幻剣"; }
+	    else if (randomNumber < 0.00200000015) { name = "晴天剣"; }
+	    else if (randomNumber < 0.002000000155) { name = "狂刃剣"; }
+	    else if (randomNumber < 0.00200000016) { name = "奔流剣"; }
+	    else if (randomNumber < 0.002000000165) { name = "霊翔剣"; }
+	    else if (randomNumber < 0.00200000017) { name = "雷霆剣"; }
+	    else if (randomNumber < 0.002000000175) { name = "剛剣剣"; }
+	    else if (randomNumber < 0.00200000018) { name = "咆哮剣"; }
+	    else if (randomNumber < 0.002000000185) { name = "水鏡剣"; }
+	    else if (randomNumber < 0.00200000019) { name = "金剛剣"; }
+	    else if (randomNumber < 0.002000000195) { name = "真紅剣"; }
+	    else if (randomNumber < 0.0020000002) { name = "魔鏡剣"; }
+	    else if (randomNumber < 0.002000000205) { name = "青炎剣"; }
+	    else if (randomNumber < 0.00200000021) { name = "降魔剣"; }
+	    else if (randomNumber < 0.002000000215) { name = "龍脈剣"; }
+	    else if (randomNumber < 0.00200000022) { name = "絶望剣"; }
+	    else if (randomNumber < 0.002000000225) { name = "不死剣"; }
+	    else if (randomNumber < 0.00200000023) { name = "魔迅剣"; }
+	    else if (randomNumber < 0.002000000235) { name = "剣舞剣"; }
+	    else if (randomNumber < 0.00200000024) { name = "魔炎剣"; }
+	    else if (randomNumber < 0.002000000245) { name = "真理剣"; }
+	    else if (randomNumber < 0.00200000025) { name = "白鷺剣"; }
+	    else if (randomNumber < 0.002000000255) { name = "蒼炎剣"; }
+	    else if (randomNumber < 0.00200000026) { name = "聖刃剣"; }
+	    else if (randomNumber < 0.002000000265) { name = "幻炎剣"; }
+	    else if (randomNumber < 0.00200000027) { name = "紅焔剣"; }
+	    else if (randomNumber < 0.002000000275) { name = "闇翔剣"; }
+	    else if (randomNumber < 0.00200000028) { name = "疾風剣"; }
+	    else if (randomNumber < 0.002000000285) { name = "不屈剣"; }
+	    else if (randomNumber < 0.00200000029) { name = "太陽剣"; }
+	    else if (randomNumber < 0.002000000295) { name = "月刀剣"; }
+	    else if (randomNumber < 0.0020000003) { name = "碧空剣"; }
+	    else if (randomNumber < 0.002000000305) { name = "幻影剣"; }
+	    else if (randomNumber < 0.031) { name = "雷光剣"; }
+	    else if (randomNumber < 0.315) { name = "青雷剣"; }
+	    else if (randomNumber < 0.32) { name = "鬼神剣"; }
+    	    else {
+                name = "普通の名前";
+            }
+            document.getElementById("result").textContent = `当たった名前: ${name}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>確率が低い名前当てゲーム</h1>
+    <button onclick="roll()">Roll</button>
+    <p id="result"></p>
+</body>
+</html>

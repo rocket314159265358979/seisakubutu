@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html class="js svg canvas webgl bgpositionshorthand multiplebgs csspointerevents inlinesvg cubicbezierrange csscalc cssgradients opacity supports svgclippaths smil pointerevents no-touchevents fontface generatedcontent nthchild cssvhunit cssvmaxunit cssvminunit cssvwunit mediaqueries textshadow cssanimations csspseudoanimations appearance backgroundcliptext backgroundsize bgpositionxy bgsizecover borderimage boxsizing cssfilters ellipsis flexbox flexboxlegacy no-flexboxtweener flexwrap cssreflections csstransforms csstransforms3d preserve3d csstransitions no-csspseudotransitions userselect backgroundblendmode" lang="ja" style=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>パスワード生成（パスワード作成）</title>
+<meta name="keywords" content="パスワード生成,パスワード作成">
+<meta name="description" content="パスワード生成（パスワード作成）するweb・ウェブ制作に役立つ便利ツール。お好みのパスワードを生成（自動作成）することができるツールです。利用は完全無料です。">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-title" content="LUFTTOOLS">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="msapplication-TileImage" content="https://www.luft.co.jp/cgi/msapplication-tile-icon.png">
+<meta name="google-adsense-account" content="ca-pub-4697947772204817">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ルフトツールズ（LUFTTOOLS） web・ウェブ制作に役立つ便利ツール集">
+<meta property="og:title" content="パスワード生成（パスワード作成）ツール">
+<meta property="og:description" content="パスワード生成（パスワード作成）するweb・ウェブ制作に役立つ便利ツール。お好みのパスワードを生成（自動作成）することができるツールです。利用は完全無料です。">
+<meta property="og:image" content="https://www.luft.co.jp/cgi/share.gif">
+<meta property="og:url" content="https://www.luft.co.jp/cgi/randam.php">
+<meta property="fb:app_id" content="444202198989867">
+<link rel="shortcut icon" href="https://www.luft.co.jp/cgi/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.luft.co.jp/cgi/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.luft.co.jp/cgi/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.luft.co.jp/cgi/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.luft.co.jp/cgi/apple-touch-icon-152x152.png">
+<link rel="start" href="https://www.luft.co.jp/cgi/" title="ルフトツールズ（LUFTTOOLS） web・ウェブ制作に役立つ便利ツール集 | produced by SAVEE,INC.">
+<link rel="canonical" href="https://www.luft.co.jp/cgi/randam.php">
+<link href="./css/base.css" rel="stylesheet" media="all">
+<link href="./css/contents.css" rel="stylesheet" media="all">
+<script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202405150101/reactive_library_fy2021.js?bust=31083749"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=G-G2K979SM7N&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MJC3TTJV"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202405150101/show_ads_impl_fy2021.js?bust=31083749" style="color: rgb(0, 0, 0);"></script><script src="./js/modernizr.js"></script>
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+<body aria-hidden="false">
+<div id="wrapper" class="randamPage lowerCommon" style="height: auto !important;">
+  <header id="header" class="fixed">
+    <div id="header_top">
+      <h1 class="page_name">パスワード生成（パスワード作成）</h1>
+    <!-- /#header_top --></div>
+
+		<div id="header_btm">
+			<div id="gNav_btn">
+				<button class="btn" type="button">
+					<span class="top"></span>
+					<span class="mid"></span>
+					<span class="btm"></span>
+				</button>
+				<p class="txt">MENU</p>
+			<!-- /#gNav_btn --></div>
+			<ul class="links">
+				<li><a href="./en/">
+					<span class="txt_wrap">EN</span>
+				</a></li>
+				<!-- <li><a href="./">
+					<span class="txt_wrap">JP</span>
+				</a></li> -->
+			</ul>
+
+			<ul class="sns">
+				<li>
+					<a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),null,'width=550,height=400');return false;"><i class="icon"><img src="./images/common/icon_fb.gif" width="10" height="20" alt="Facebook"></i></a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="window.open('https://twitter.com/share?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.getElementsByName('description').item(0).content),'twitter','toolbar=no,width=550,height=300');return false;"><i class="icon"><img src="./images/common/icon_tw.gif" width="18" height="15" alt="Twitter"></i></a>
+				</li>
+			</ul>
+
+			<p id="logo"><a href="./"><img src="./images/common/logo.gif" width="161" height="27" alt="ルフトツールズ（LUFTTOOLS） Web便利ツール集"></a></p>
+		<!-- /#header_btm --></div>
+	<!-- /#header --></header>
+	<div id="gNav_wrap">
+		<div id="gNav">
+			<ul>
+				<li><a href="./">
+					<i class="icon">
+						<img src="./images/common/icon_home.png" width="26" height="23" alt="HOME">
+					</i>
+					<span class="txt">HOME</span>
+				</a></li>
+				<li><a href="./randam.php">
+					<i class="icon">
+						<img src="./images/common/icon_randam.png" width="23" height="32" alt="パスワード生成">
+					</i>
+					<span class="txt">パスワード生成</span>
+				</a></li>
+				<li><a href="./htpasswd.php">
+					<i class="icon">
+						<img src="./images/common/icon_htpasswd.png" width="22" height="29" alt=".htpasswd ファイル作成">
+					</i>
+					<span class="txt">.htpasswd ファイル作成</span>
+				</a></li>
+				<li><a href="./coding.php">
+					<i class="icon">
+						<img src="./images/common/icon_coding.png" width="26" height="28" alt="メールアドレス暗号化">
+					</i>
+					<span class="txt">メールアドレス暗号化</span>
+				</a></li>
+				<li><a href="./str_counter.php">
+					<i class="icon">
+						<img src="./images/common/icon_str_counter.png" width="31" height="28" alt="文字数カウント">
+					</i>
+					<span class="txt">文字数カウント</span>
+				</a></li>
+				<li><a href="./ipcheck.php">
+					<i class="icon">
+						<img src="./images/common/icon_ipcheck.png" width="33" height="29" alt="IPアドレス確認">
+					</i>
+					<span class="txt">IPアドレス確認</span>
+				</a></li>
+				<li><a href="./env.php">
+					<i class="icon">
+						<img src="./images/common/icon_env.png" width="25" height="25" alt="環境変数確認">
+					</i>
+					<span class="txt">環境変数確認</span>
+				</a></li>
+				<li><a href="./png-transparent.php">
+					<i class="icon">
+						<img src="./images/common/icon_png-transparent.png" width="25" height="25" alt="画像透過ツール">
+					</i>
+					<span class="txt">画像透過ツール</span>
+				</a></li>
+				<li><a href="./ip-adress-search.php">
+					<i class="icon">
+						<img src="./images/common/icon_ip-adress-search.png" width="25" height="25" alt="IPアドレス住所検索">
+					</i>
+					<span class="txt">IPアドレス住所検索</span>
+				</a></li>
+				<li><a href="./lottery.php">
+					<i class="icon">
+						<img src="./images/common/icon_lottery.png" width="25" height="25" alt="くじ引き（抽選ツール）">
+					</i>
+					<span class="txt">くじ引き（抽選ツール）</span>
+				</a></li>
+				<li><a href="./gif-conversion.php">
+					<i class="icon">
+						<img src="./images/common/icon_gif-conversion.png" width="25" height="25" alt="MP4→GIF変換（GIF作成）">
+					</i>
+					<span class="txt">MP4→GIF変換（GIF作成）</span>
+				</a></li>
+				<li><a href="./sql-formatting.php">
+					<i class="icon">
+						<img src="./images/common/icon_sql-formatting.png" width="25" height="25" alt="SQL整形">
+					</i>
+					<span class="txt">SQL整形</span>
+				</a></li>
+				<li><a href="./web-calculator.php">
+					<i class="icon">
+						<img src="./images/common/icon_web-calculator.png" width="25" height="25" alt="WEB電卓">
+					</i>
+					<span class="txt">WEB電卓</span>
+				</a></li>
+				<li><a href="./image-color-picker.php">
+					<i class="icon">
+						<img src="./images/common/icon_image-color-picker.png" width="25" height="25" alt="カラーピッカー">
+					</i>
+					<span class="txt">カラーピッカー</span>
+				</a></li>
+				<li><a href="./base64-encoding-decoding.php">
+					<i class="icon">
+						<img src="./images/common/icon_base64-encoding-decoding.png" width="25" height="25" alt="Base64 エンコード・デコード">
+					</i>
+					<span class="txt">Base64 エンコード・デコード</span>
+				</a></li>
+				<li><a href="./image-resize.php">
+					<i class="icon">
+						<img src="./images/common/icon_image-resize.png" width="25" height="25" alt="画像リサイズ">
+					</i>
+					<span class="txt">画像リサイズ</span>
+				</a></li>
+				<li><a href="./team-division.php">
+					<i class="icon">
+						<img src="./images/common/icon_team-division.png" width="25" height="25" alt="チーム分け・グループ分け">
+					</i>
+					<span class="txt">チーム分け・グループ分け</span>
+				</a></li>
+				<li><a href="./email-existence.php">
+					<i class="icon">
+						<img src="./images/common/icon_email-existence.png" width="25" height="25" alt="メールアドレス存在確認">
+					</i>
+					<span class="txt">メールアドレス存在確認</span>
+				</a></li>
+				<li><a href="./whois.php">
+					<i class="icon">
+						<img src="./images/common/icon_whois.png" width="25" height="25" alt="Whois検索">
+					</i>
+					<span class="txt">Whois検索</span>
+				</a></li>
+				<li><a href="./amidakuji.php">
+					<i class="icon">
+						<img src="./images/common/icon_amidakuji.png" width="25" height="25" alt="あみだくじオンライン">
+					</i>
+					<span class="txt">あみだくじオンライン</span>
+				</a></li>
+				<li><a href="./nslookup.php">
+					<i class="icon">
+						<img src="./images/common/icon_nslookup.png" width="25" height="25" alt="nslookup・DNSサーバー確認">
+					</i>
+					<span class="txt">nslookup・DNSサーバー確認</span>
+				</a></li>
+			</ul>
+		<!-- /#gNav--></div>
+	<!-- /#gNav_wrap --></div>
+
+  <div id="contents_wrap" style="height: auto !important;">
+    <div id="container" style="height: auto !important;">
+      <div id="container_in" style="height: auto !important;">
+        <div id="main" role="main" style="height: auto !important;">
+          <section id="sections_wrap" style="height: auto !important;">
+            <div id="tool_box" style="height: auto !important;">
+              <header class="tool_box_header">
+                <h2 class="tool_box_ttl">
+                  <span class="jp">パスワード生成（パスワード作成）ツール</span>
+                  <span class="en">Randam password generation</span>
+                </h2>
+                <i class="tool_box_icon">
+                  <img src="./images/common/icon_randam.png" width="25" height="35" alt="パスワード生成ツール">
+                </i>
+              <!-- /.tool_box_header --></header>
+              <div class="tool_box_body" style="height: auto !important;">
+                <div class="tool_box_desc">
+                  <p class="pgp">
+お好みのパスワードを生成（自動作成）することができるツールです。<br>
+利用は完全無料です。<br>
+文字数は2～40文字まで、個数は最大1,000個まで生成できます。
+                  </p>
+                <!-- /.tool_box_desc --></div>
+<form method="post" action="randam.php" name="formcheck" style="height: auto !important;">
+                <div class="randam_selects lf">
+                  <dl>
+                    <dt>強度</dt>
+                    <dd>
+                      <div class="check_wrap">
+                        <input type="radio" id="Enable" name="stg" onclick="enable()" value="0">
+                        <i class="shape radio"></i><label class="txt" for="Enable">カスタム</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Disable1" name="stg" onclick="disable()" value="1">
+                        <i class="shape radio"></i><label class="txt" for="Disable1">強力</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Disable2" name="stg" onclick="disable()" value="2" checked="checked">
+                        <i class="shape radio"></i><label class="txt" for="Disable2">最強</label>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>文字</dt>
+                    <dd>
+                      <div class="check_wrap">
+                        <input type="checkbox" id="Cbox0" name="str_style[]" value="0" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox0">英字（大文字）</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="checkbox" id="Cbox1" name="str_style[]" value="1" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox1">英字（小文字）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox2" name="str_style[]" value="2" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox2">数字</label>
+                      </div>
+                      
+                      
+                      
+                      <div class="check_wrap">
+                        <input type="radio" id="Symbol0" name="symbol" value="0" disabled="">
+                        <i class="shape radio"></i><label class="txt" for="Symbol0">記号なし</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Symbol1" name="symbol" value="1" checked="checked" disabled="">
+                        <i class="shape radio"></i><label class="txt" for="Symbol1">記号あり</label>
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                 <div id="pulldown" class="ope open">
+                      
+                      
+                      
+                      <!--
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox3" name="str_style[]" value="3">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox3">記号</label>
+                      </div>
+                      -->
+                      
+                      
+                      
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox6" name="str_style[]" value="6" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox6">-（ハイフン）</label>
+                      </div>
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox19" name="str_style[]" value="19" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox19">_（アンダーバー）</label>
+                      </div>
+                      
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox4" name="str_style[]" value="4" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox4">/（スラッシュ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox5" name="str_style[]" value="5" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox5">*（アスタリスク）</label>
+                      </div>
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox7" name="str_style[]" value="7" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox7">+（プラス）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox8" name="str_style[]" value="8" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox8">.（ドット）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox9" name="str_style[]" value="9" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox9">,（カンマ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox10" name="str_style[]" value="10" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox10">!（エクスクラメーション）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox11" name="str_style[]" value="11" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox11">#（シャープ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox12" name="str_style[]" value="12" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox12">$（ドル）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox13" name="str_style[]" value="13" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox13">%（パーセント）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox14" name="str_style[]" value="14" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox14">&amp;（アンド）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox15" name="str_style[]" value="15" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox15">(（左かっこ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox16" name="str_style[]" value="16" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox16">)（右かっこ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox17" name="str_style[]" value="17" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox17">~（チルダ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox18" name="str_style[]" value="18" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox18">|（パイプ）</label>
+                      </div>
+                      
+                      
+                      
+                 </div>
+
+
+
+
+
+
+                      <div class="check_wrap">
+                        <input type="checkbox" id="initialsCbox" name="initial" value="0">
+                        <i class="shape checkbox"></i><label class="txt" for="initialsCbox">頭文字を指定</label>
+                      </div>
+
+					  <div id="InitialSelectArea" class="ope">
+					  	<div class="check_wrap size_s">
+					  		<input type="radio" id="Initials0" name="initial_style" value="0">
+					  		<i class="shape radio"></i><label class="txt" for="Initials0">英字（大文字）</label>
+					  	</div>
+					  	<div class="check_wrap size_s">
+					  		<input type="radio" id="Initials1" name="initial_style" value="1">
+					  		<i class="shape radio"></i><label class="txt" for="Initials1">英字（小文字）</label>
+					  	</div>
+					  	<div class="check_wrap size_s">
+					  		<input type="radio" id="Initials2" name="initial_style" value="2">
+					  		<i class="shape radio"></i><label class="txt" for="Initials2">数字</label>
+					  	</div>
+					  </div>
+
+
+
+
+
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>文字数</dt>
+                    <dd>
+                      <div class="check_wrap plus_form">
+                        <input type="radio" id="Digit0" name="digit" value="0">
+                        <i class="shape radio"></i><input type="number" name="digit_s" value="" onfocus="d_focus()" class="form_txt"><label class="txt" for="Digit0">文字</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Digit2" name="digit" value="8">
+                        <i class="shape radio"></i><label class="txt" for="Digit2">8文字</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Digit3" name="digit" value="12" checked="checked">
+                        <i class="shape radio"></i><label class="txt" for="Digit3">12文字</label>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>個数</dt>
+                    <dd>
+                      <div class="check_wrap plus_form">
+                        <input type="radio" id="Su0" name="su" value="0">
+                        <i class="shape radio"></i><input type="number" name="su_s" value="" onfocus="s_focus()" class="form_txt"><label class="txt" for="Su0">個</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Su2" name="su" value="10">
+                        <i class="shape radio"></i><label class="txt" for="Su2">10個</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Su3" name="su" value="50" checked="checked">
+                        <i class="shape radio"></i><label class="txt" for="Su3">50個</label>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>その他</dt>
+                    <dd>
+                      <div class="check_wrap row">
+                        <input type="checkbox" id="Condition0" name="condition[]" value="0" checked="checked">
+                        <i class="shape checkbox"></i><label class="txt" for="Condition0">似通った英数字は省く</label>
+                      </div>
+                      <div class="check_wrap row">
+                        <input type="checkbox" id="Condition1" name="condition[]" value="1" checked="checked">
+                        <i class="shape checkbox"></i><label class="txt" for="Condition1">8文字以内の場合、同じ文字は2回以上使わない</label>
+                      </div>
+                    </dd>
+                  </dl>
+                <!-- /.randam_selects --></div>
+
+<div class="main_adv" style="height: auto !important;">
+	<div class="adv_wrap">
+		<div class="adv">
+<!-- main_adv START -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4697947772204817" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- NEWLUFTTOOLS_responsive_2 -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-4697947772204817" data-ad-slot="1287359418" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" style="border: none; height: 280px; width: 618px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_1" name="aswift_1" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:618px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="618" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=280&amp;slotname=1287359418&amp;adk=2597975396&amp;adf=752410418&amp;pi=t.ma~as.1287359418&amp;w=618&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1715920575&amp;rafmt=1&amp;format=618x280&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575267&amp;bpp=3&amp;bdt=205&amp;idt=193&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=185&amp;ady=718&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7CeoEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;dtd=214" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPmx26Luk4YDFSfETAIdWOgI3w" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- main_adv END -->
+		</div>
+	</div>
+<!-- /.main_adv --></div>
+<input type="hidden" name="submit" value="submit">
+                <button type="submit" class="btn_form btn_submit">生成</button>
+</form>
+<form method="post" action="randam.php">
+<input type="hidden" name="reset" value="reser">
+                <button type="submit" class="btn_form btn_cancel2">リセット</button>
+</form>
+
+<form method="post" action="randam.php">
+<input type="hidden" name="down" value="downer">
+                <button type="submit" class="btn_form btn_download">パスワードデータをダウンロード</button>
+</form>
+<!--
+<p class="exp_txt">
+  ※スマートフォンやタブレットではパスワードデータを開けない場合があります。
+</p>
+-->
+
+
+                <div class="randam_gene_block">
+                  <div class="randam_gene_block_in">
+                    <div class="item_wrap">
+<input type="text" value="Fn8UbH3S3b/V" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="$xd!bn3g_~x_" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="nX7ZTTD-)~~F" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="7RB)ajsfV_zi" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="LsS~rRxEC,9K" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="_+USV8+JHp2r" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="cUvbuS#N*!5~" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="rVHCciL*$*2%" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="%gLN|E4h68R3" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="2-|v%R9C7Pj&amp;" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="T*Hm6hT9!C,L" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="$V-G2$Rdm4UA" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="BDjv)5**wSf-" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="~bKqvUm(!6vm" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="Y+-mBeJC&amp;hA9" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="-j0k/KXZ)%QQ" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="R,Rzvj5F%hyD" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="VXZ!MqU4frPY" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="EbfESnYN)x3v" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="TQMj~*rqKF(5" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="yHJY6Ax/Sfvi" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="FqxThJBH3G.." style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="x-!25!p$y./S" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="gbENA|#Zu5v*" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="*!yKX&amp;)K$.3p" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="&amp;~b%Uw5$|4sg" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="EYZ&amp;.X8,Q%n4" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="xU8xVF54Skfc" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="NXcnsJkjF!z8" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="K~h4T%RKezF," style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="C!5-uB9g6JvA" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="39jPKCdU7-cg" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="aLYDpf*$+Ni2" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="Yemr7KWtj((D" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value=")Wa*sKb(QMs.8" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="/p-8,GYB7PEL" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="sMVzTjkBS6G|" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="WfT+Zeryi2C," style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="#/qTc37b/m|w" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="XDBE$kk1rkyJ" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="jE4!ETshDpvc" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="pMbp%#AZT+0P" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="(.*Ri3txx!DP" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="2hM9YaW6N&amp;Y)" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="5T#pdZ4k.Tw|" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="hZVEis|!3S|L" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="+(2*H$W#PFw3" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="xaMUu8s28/+g" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="iP_sm-hHKS|8" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="hQ2da~E2n4i6" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+                    <!-- /.item_wrap --></div>
+                  <!-- /.randam_gene_block_in --></div>
+                <!-- /.randam_gene_block --></div>
+                
+                
+<!--
+                <div class="tool_box_add">
+                  <p class="pgp">
+※文字数は2～40文字まで指定できます。
+                  </p>
+                  <p class="pgp">
+※個数は最大1,000個まで生成できます。
+                  </p>
+                </div>
+-->
+
+
+                <div class="tool_box_add">
+                  <p class="pgp">
+※選択された文字はクリップボードにコピーされます。
+                  </p>
+                </div>
+
+
+
+              <!-- /.tool_box_body --></div>
+            <!-- /#tool_box --></div>
+            <section class="sec">
+              <header class="sec_header">
+                <h3 class="sec_ttl">
+                  <span class="txt">使い方</span>
+                </h3>
+              </header>
+              <div class="sec_body">
+                <div class="txt_wrap">
+                  <p class="pgp">
+お好みのパスワードを生成（自動作成）することができるツールです。<br>
+パスワードに使用する文字の種類（数字、英文字、記号）、文字数の長さ、生成する個数を指定可能です。<br>
+ご希望のセキュリティ強度、文字、文字数、個数がございましたらご入力、ご選択後に「生成」ボタンをクリックしてください。<br>
+再度、「生成」ボタンを押すことで新しいパスワードが生成されます。<br>
+<span class="pc_view">
+※生成されたパスワードはテキストファイルにてダウンロード可能です。<br>
+「パスワードデータをダウンロード」ボタンをクリックしてダウンロードしてください。<br>
+</span>
+<span class="sp_view">
+※スマートフォンやタブレットでご利用の方は、生成されたパスワードを直接コピーしてご利用ください。<br>
+</span>
+※文字数は最大40文字まで、個数は最大1000個までとなります。<br>
+※文字の「記号あり」で任意の記号が選択可能になりました。<br>
+※文字の「頭文字の指定」で頭文字に「英字（大文字）」「英字（小文字）」「数字」が選択可能になりました。<br>
+
+                  </p>
+                </div>
+              <!-- /.sec_body --></div>
+            <!-- /.sec --></section>
+            <section class="sec">
+              <header class="sec_header">
+                <h3 class="sec_ttl">
+                  <span class="txt">その他「似通った英数字は省く」について</span>
+                </h3>
+              </header>
+              <div class="sec_body">
+                <div class="txt_wrap">
+                  <p class="pgp">
+「似通った英数字は省く」にチェックいただくことで以下の文字は生成されるパスワードに含まれなくなります。<br>
+I = 英字（大文字）のアイ<br>
+l = 英字（小文字）のエル<br>
+1 = 数字のいち
+                  </p>
+                  <p class="pgp">
+O = 英字（大文字）のオー<br>
+o = 英字（小文字）のオー<br>
+0 = 数字のゼロ
+                  </p>
+                </div>
+              <!-- /.sec_body --></div>
+            <!-- /.sec --></section>
+            <section class="sec">
+              <header class="sec_header">
+                <h3 class="sec_ttl">
+                  <span class="txt">記号文字について</span>
+                </h3>
+              </header>
+              <div class="sec_body">
+                <div class="txt_wrap">
+                  <p class="pgp">
+本ツールでは以下の記号文字を使用しております。<br>
+/*-+.,!#$%&amp;()~|_
+                  </p>
+                </div>
+              <!-- /.sec_body --></div>
+            <!-- /.sec --></section>
+            <div class="notes">
+              <p class="pgp">
+※このプログラムはPHP8.1.22にて作成、動作確認を行っております。<br>
+※ご利用下さっている皆様の
+<a href="https://www.luft.co.jp/contact/" target="_blank">ご意見・ご要望をお寄せください。</a>
+              </p>
+            <!-- /.notes --></div>
+          <!-- /#sections_wrap --></section>
+        <!-- /#main --></div>
+
+				<div id="side" style="height: auto !important;">
+
+					<aside class="side_adv">
+						<div class="adv_wrap">
+							<div class="adv square">
+<!-- side_adv START -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4697947772204817" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- NEWLUFTTOOLS_300_250_1 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4697947772204817" data-ad-slot="6714930002" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_2" name="aswift_2" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=250&amp;slotname=6714930002&amp;adk=3935161689&amp;adf=1508948090&amp;pi=t.ma~as.6714930002&amp;w=300&amp;abgtt=6&amp;lmt=1715920575&amp;format=300x250&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575270&amp;bpp=3&amp;bdt=207&amp;idt=253&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0%2C618x280&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=871&amp;ady=173&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7CeoE%7C&amp;abl=CS&amp;pfx=0&amp;fu=0&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=3&amp;uci=a!3&amp;fsb=1&amp;dtd=273" data-google-container-id="a!3" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPad2KLuk4YDFYMJewcdJrQONg" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- side_adv END -->
+							</div>
+						</div>
+					<!-- /.side_adv --></aside>
+
+					<nav id="sNav" style="height: auto !important;">
+						<header class="side_header">
+							<h2 class="ttl">
+								<span class="txt">人気のツール</span>
+							</h2>
+						<!-- /.side_header --></header>
+						<div class="side_body">
+							<ul id="sNav_list">
+								<li>
+									<a href="./randam.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_randam.png" width="23" height="32" alt="パスワード生成">
+											</i><span class="txt">パスワード生成</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_randam.png" width="23" height="32" alt="パスワード生成">
+											</i><span class="txt">パスワード生成</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./str_counter.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_str_counter.png" width="31" height="28" alt="文字数カウント">
+											</i><span class="txt">文字数カウント</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_str_counter.png" width="31" height="28" alt="文字数カウント">
+											</i><span class="txt">文字数カウント</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./lottery.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_lottery.png" width="25" height="25" alt="くじ引き（抽選ツール）">
+											</i><span class="txt">くじ引き（抽選ツール）</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_lottery.png" width="25" height="25" alt="くじ引き（抽選ツール）">
+											</i><span class="txt">くじ引き（抽選ツール）</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./htpasswd.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_htpasswd.png" width="22" height="29" alt=".htpasswd ファイル作成">
+											</i><span class="txt">.htpasswd ファイル作成</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_htpasswd.png" width="22" height="29" alt=".htpasswd ファイル作成">
+											</i><span class="txt">.htpasswd ファイル作成</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./web-calculator.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_web-calculator.png" width="25" height="25" alt="WEB電卓">
+											</i><span class="txt">WEB電卓</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_web-calculator.png" width="25" height="25" alt="WEB電卓">
+											</i><span class="txt">WEB電卓</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div><div class="google-auto-placed" style="width: 100%; height: auto; clear: none; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-4697947772204817" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 100px;" data-ad-status="filled"><div id="aswift_5_host" style="border: none; height: 100px; width: 332px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_5" name="aswift_5" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:332px;height:100px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="332" height="100" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=100&amp;adk=3389041745&amp;adf=745618994&amp;pi=t.aa~a.2273067071~rp.4&amp;w=332&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1715920576&amp;rafmt=1&amp;to=qs&amp;pwprc=7473214062&amp;format=332x100&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fwr=0&amp;pra=3&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=40&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920576037&amp;bpp=2&amp;bdt=974&amp;idt=2&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0%2C618x280%2C300x250%2C300x600%2C1349x641&amp;nras=3&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=855&amp;ady=878&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=6&amp;uci=a!6&amp;btvi=3&amp;fsb=1&amp;dtd=31" data-google-container-id="a!6" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CNy19aLuk4YDFUvGFgUd0v8NdQ" data-load-complete="true"></iframe></div></ins></div>
+					<aside class="side_adv" style="height: auto !important;">
+						<div class="adv_wrap" style="height: auto !important;">
+							<div class="adv">
+<!-- side_adv START -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4697947772204817" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- NEWLUFTTOOLS_responsive_1 -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-4697947772204817" data-ad-slot="8223452795" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_3_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=600&amp;slotname=8223452795&amp;adk=187729176&amp;adf=3963961529&amp;pi=t.ma~as.8223452795&amp;w=300&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1715920575&amp;rafmt=1&amp;format=300x600&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=4&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575290&amp;bpp=8&amp;bdt=228&amp;idt=290&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0%2C618x280%2C300x250&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=871&amp;ady=884&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7CeoEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2&amp;fsb=1&amp;dtd=300" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPup2KLuk4YDFVrDTAIdRGgJCA" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- side_adv END -->
+							</div>
+						</div>
+					<!-- /.side_adv --></aside>
+							<div class="side_list">
+							<p class="side_list_menu_title">ITツールメニュー</p>
+							<ul>
+							<li><a href="./randam.php"><span class="txt">パスワード生成</span></a></li>
+							<li><a href="./htpasswd.php"><span class="txt">.htpasswdファイル生成</span></a></li>
+							<li><a href="./coding.php"><span class="txt">メールアドレス暗号化</span></a></li>
+							<li><a href="./str_counter.php"><span class="txt">文字数カウント</span></a></li>
+							<li><a href="./ipcheck.php"><span class="txt">IPアドレス確認</span></a></li>
+							<li><a href="./env.php"><span class="txt">環境変数確認</span></a></li>
+							<li><a href="./png-transparent.php"><span class="txt">画像透過ツール</span></a></li>
+							<li><a href="./ip-adress-search.php"><span class="txt">IPアドレス住所検索</span></a></li>
+							<li><a href="./lottery.php"><span class="txt">くじ引き（抽選ツール）</span></a></li>
+							<li><a href="./gif-conversion.php"><span class="txt">MP4→GIF変換（GIF作成）</span></a></li>
+							<li><a href="./sql-formatting.php"><span class="txt">SQL整形</span></a></li>
+							<li><a href="./web-calculator.php"><span class="txt">WEB電卓</span></a></li>
+							<li><a href="./image-color-picker.php"><span class="txt">カラーピッカー</span></a></li>
+							<li><a href="./base64-encoding-decoding.php"><span class="txt">Base64 エンコード・デコード</span></a></li>
+							<li><a href="./image-resize.php"><span class="txt">画像リサイズ</span></a></li>
+							<li><a href="./team-division.php"><span class="txt">チーム分け・グループ分け</span></a></li>
+							<li><a href="./email-existence.php"><span class="txt">メールアドレス存在確認</span></a></li>
+							<li><a href="./whois.php"><span class="txt">Whois検索</span></a></li>
+							<li><a href="./amidakuji.php"><span class="txt">あみだくじオンライン</span></a></li>
+							<li><a href="./nslookup.php"><span class="txt">nslookup・DNSサーバー確認</span></a></li>
+							</ul>
+							<!-- /#sNav_list -->
+						<!-- /.side_body --></div>
+					<!-- /#sNav --></nav>
+
+
+
+<!--
+					<section id="news">
+						<header class="side_header">
+							<h2 class="ttl">
+								<span class="txt">News ＆ Topics</span>
+								<a href="./rss.xml" class="rss">
+									<img src="./images/common/btn_rss.png" width="52" height="22" alt="RSS">
+								</a>
+							</h2>
+						</header>
+						<div class="side_body">
+							<ul id="news_list">
+								<li>
+									<p class="date">2016.01.08</p>
+									<div class="txt_wrap">
+<p>
+「ルフトツールズ（LUFTTOOLS）｜Web制作・開発者のためのWeb便利ツール集」は、もっと便利に快適に使えるように、随時バージョンアップを行ってまいりますので、ご利用くださっている皆さまのご意見・ご要望・ご感想をお待ちしております。
+</p>
+									</div>
+								</li>
+								<li>
+									<p class="date">2012.12.06</p>
+									<div class="txt_wrap">
+<p>
+<a href="./randam.php">パスワード生成のテキストボックスを自由入力に変更しました。</a>
+</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+-->
+				<!-- /#side --></div>
+
+
+      <!-- /#container_in --></div>
+    <!-- /#container --></div>
+    <div id="clearance">
+      <div id="clearance_in">
+        <nav id="topicPath">
+					<ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+							<a href="./" class="txt home" itemprop="item">
+								<span itemprop="name">HOME</span>
+							</a>
+							<meta itemprop="position" content="1">
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+							<a href="./randam.php" class="txt" itemprop="item">
+								<span itemprop="name">パスワード生成（パスワード作成）ツール</span>
+							</a>
+							<meta itemprop="position" content="2">
+						</li>
+					</ol>
+        <!-- /#topicPath --></nav>
+        <p id="pageTop">
+          <a href="#wrapper" class="scroll">
+            <span class="front">PAGE TOP</span><span class="rear">PAGE TOP</span>
+          </a>
+        </p>
+      <!-- /#clearance_in --></div>
+    <!-- /#clearance --></div>
+
+		<footer id="footer">
+			<div id="footer_top">
+				<p id="fLogo"><img src="./images/common/flogo.png" width="161" height="27" alt="ルフトツールズ（LUFTTOOLS） Web便利ツール集"></p>
+				<div id="fNav_wrap">
+					<div id="fNav">
+						<ul>
+							<li><a href="./"><span class="txt">HOME</span></a></li>
+							<li><a href="./randam.php"><span class="txt">パスワード生成</span></a></li>
+							<li><a href="./htpasswd.php"><span class="txt">.htpasswdファイル生成</span></a></li>
+							<li><a href="./coding.php"><span class="txt">メールアドレス暗号化</span></a></li>
+							<li><a href="./str_counter.php"><span class="txt">文字数カウント</span></a></li>
+							<li><a href="./ipcheck.php"><span class="txt">IPアドレス確認</span></a></li>
+							<li><a href="./env.php"><span class="txt">環境変数確認</span></a></li>
+							<li><a href="./png-transparent.php"><span class="txt">画像透過ツール</span></a></li>
+							<li><a href="./ip-adress-search.php"><span class="txt">IPアドレス住所検索</span></a></li>
+							<li><a href="./lottery.php"><span class="txt">くじ引き（抽選ツール）</span></a></li>
+							<li><a href="./gif-conversion.php"><span class="txt">MP4→GIF変換（GIF作成）</span></a></li>
+							<li><a href="./sql-formatting.php"><span class="txt">SQL整形</span></a></li>
+							<li><a href="./web-calculator.php"><span class="txt">WEB電卓</span></a></li>
+							<li><a href="./image-color-picker.php"><span class="txt">カラーピッカー</span></a></li>
+							<li><a href="./base64-encoding-decoding.php"><span class="txt">Base64 エンコード・デコード</span></a></li>
+							<li><a href="./image-resize.php"><span class="txt">画像リサイズ</span></a></li>
+							<li><a href="./team-division.php"><span class="txt">チーム分け・グループ分け</span></a></li>
+							<li><a href="./email-existence.php"><span class="txt">メールアドレス存在確認</span></a></li>
+							<li><a href="./whois.php"><span class="txt">Whois検索</span></a></li>
+							<li><a href="./amidakuji.php"><span class="txt">あみだくじオンライン</span></a></li>
+							<li><a href="./nslookup.php"><span class="txt">nslookup・DNSサーバー確認</span></a></li>
+						</ul>
+						<ul>
+							<!--<li><a href="./adv.html"><span class="txt">広告掲載について</span></a></li>-->
+							<li><a href="./exept.html"><span class="txt">免責事項について</span></a></li>
+							<li><a href="https://www.luft.co.jp/" target="_blank">お問い合わせ</a></li>
+							<li><a href="./sitemap.html"><span class="txt">サイトマップ</span></a></li>
+							<li><a href="./commerce.html"><span class="txt">特定商取引法に基づく表記</span></a></li>
+							<li><a href="https://www.luft.co.jp/media/" target="_blank">LUFTMEDIA</a></li>
+						</ul>
+					<!-- /#fNav --></div>
+					<div id="fIcons">
+						<ul>
+<!--
+							<li><a href="./rss.xml"><img src="./images/common/icon_frss.png" width="36" height="36" alt="RSS"></a></li>
+-->
+
+							<li><a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),null,'width=550,height=400');return false;"><img src="./images/common/icon_ffb.png" width="36" height="36" alt="Facebook"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('https://twitter.com/share?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.getElementsByName('description').item(0).content),'twitter','toolbar=no,width=550,height=300');return false;"><img src="./images/common/icon_ftw.png" width="36" height="36" alt="Twitter"></a></li>
+
+						</ul>
+					</div>
+				<!-- /#fNav_wrap --></div>
+			<!-- /#footer_top --></div>
+			<div id="footer_btm">
+				<small id="copyright">Copyright(C)2009 SAVEE,INC. All right reserved.</small>
+			<!-- /#footer_btm --></div>
+		<!-- /#footer --></footer>
+
+  <!-- /#contents_wrap --></div>
+<!-- /#wrapper --></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=6&amp;lmt=1715920575&amp;plat=1%3A1024%2C2%3A16778240%2C3%3A2097152%2C4%3A2097152%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;pra=5&amp;wgl=1&amp;easpi=0&amp;aihb=0&amp;asro=0&amp;aslmct=0.7&amp;asamct=0.7&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575256&amp;bpp=11&amp;bdt=194&amp;idt=66&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=2&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=118" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins>
+<script src="./js/core.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/TweenMax.min.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/disable.js"></script>
+
+<!-- analyze -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJC3TTJV');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJC3TTJV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- /analyze -->
+
+
+<iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20240515/r20110914/zrt_lookup_fy2021.html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><div id="aswift_4_host" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_4" name="aswift_4" browsingtopics="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20240515/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-4697947772204817&amp;fa=8&amp;ifi=5&amp;uci=a!5" data-google-container-id="a!5" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CKyl2KLuk4YDFfOBuQUdNGEOXQ" data-load-complete="true"></iframe></div></ins></html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>パスワード生成（パスワード作成）</title>
+<meta name="keywords" content="パスワード生成,パスワード作成">
+<meta name="description" content="パスワード生成（パスワード作成）するweb・ウェブ制作に役立つ便利ツール。お好みのパスワードを生成（自動作成）することができるツールです。利用は完全無料です。">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="apple-mobile-web-app-title" content="LUFTTOOLS">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="msapplication-TileImage" content="https://www.luft.co.jp/cgi/msapplication-tile-icon.png">
+<meta name="google-adsense-account" content="ca-pub-4697947772204817">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ルフトツールズ（LUFTTOOLS） web・ウェブ制作に役立つ便利ツール集">
+<meta property="og:title" content="パスワード生成（パスワード作成）ツール">
+<meta property="og:description" content="パスワード生成（パスワード作成）するweb・ウェブ制作に役立つ便利ツール。お好みのパスワードを生成（自動作成）することができるツールです。利用は完全無料です。">
+<meta property="og:image" content="https://www.luft.co.jp/cgi/share.gif">
+<meta property="og:url" content="https://www.luft.co.jp/cgi/randam.php">
+<meta property="fb:app_id" content="444202198989867">
+<link rel="shortcut icon" href="https://www.luft.co.jp/cgi/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.luft.co.jp/cgi/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.luft.co.jp/cgi/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.luft.co.jp/cgi/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.luft.co.jp/cgi/apple-touch-icon-152x152.png">
+<link rel="start" href="https://www.luft.co.jp/cgi/" title="ルフトツールズ（LUFTTOOLS） web・ウェブ制作に役立つ便利ツール集 | produced by SAVEE,INC.">
+<link rel="canonical" href="https://www.luft.co.jp/cgi/randam.php">
+<link href="./css/base.css" rel="stylesheet" media="all">
+<link href="./css/contents.css" rel="stylesheet" media="all">
+<script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202405150101/reactive_library_fy2021.js?bust=31083749"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=G-G2K979SM7N&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MJC3TTJV"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202405150101/show_ads_impl_fy2021.js?bust=31083749" style="color: rgb(0, 0, 0);"></script><script src="./js/modernizr.js"></script>
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+<body aria-hidden="false">
+<div id="wrapper" class="randamPage lowerCommon" style="height: auto !important;">
+  <header id="header" class="fixed">
+    <div id="header_top">
+      <h1 class="page_name">パスワード生成（パスワード作成）</h1>
+    <!-- /#header_top --></div>
+
+		<div id="header_btm">
+			<div id="gNav_btn">
+				<button class="btn" type="button">
+					<span class="top"></span>
+					<span class="mid"></span>
+					<span class="btm"></span>
+				</button>
+				<p class="txt">MENU</p>
+			<!-- /#gNav_btn --></div>
+			<ul class="links">
+				<li><a href="./en/">
+					<span class="txt_wrap">EN</span>
+				</a></li>
+				<!-- <li><a href="./">
+					<span class="txt_wrap">JP</span>
+				</a></li> -->
+			</ul>
+
+			<ul class="sns">
+				<li>
+					<a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),null,'width=550,height=400');return false;"><i class="icon"><img src="./images/common/icon_fb.gif" width="10" height="20" alt="Facebook"></i></a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="window.open('https://twitter.com/share?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.getElementsByName('description').item(0).content),'twitter','toolbar=no,width=550,height=300');return false;"><i class="icon"><img src="./images/common/icon_tw.gif" width="18" height="15" alt="Twitter"></i></a>
+				</li>
+			</ul>
+
+			<p id="logo"><a href="./"><img src="./images/common/logo.gif" width="161" height="27" alt="ルフトツールズ（LUFTTOOLS） Web便利ツール集"></a></p>
+		<!-- /#header_btm --></div>
+	<!-- /#header --></header>
+	<div id="gNav_wrap">
+		<div id="gNav">
+			<ul>
+				<li><a href="./">
+					<i class="icon">
+						<img src="./images/common/icon_home.png" width="26" height="23" alt="HOME">
+					</i>
+					<span class="txt">HOME</span>
+				</a></li>
+				<li><a href="./randam.php">
+					<i class="icon">
+						<img src="./images/common/icon_randam.png" width="23" height="32" alt="パスワード生成">
+					</i>
+					<span class="txt">パスワード生成</span>
+				</a></li>
+				<li><a href="./htpasswd.php">
+					<i class="icon">
+						<img src="./images/common/icon_htpasswd.png" width="22" height="29" alt=".htpasswd ファイル作成">
+					</i>
+					<span class="txt">.htpasswd ファイル作成</span>
+				</a></li>
+				<li><a href="./coding.php">
+					<i class="icon">
+						<img src="./images/common/icon_coding.png" width="26" height="28" alt="メールアドレス暗号化">
+					</i>
+					<span class="txt">メールアドレス暗号化</span>
+				</a></li>
+				<li><a href="./str_counter.php">
+					<i class="icon">
+						<img src="./images/common/icon_str_counter.png" width="31" height="28" alt="文字数カウント">
+					</i>
+					<span class="txt">文字数カウント</span>
+				</a></li>
+				<li><a href="./ipcheck.php">
+					<i class="icon">
+						<img src="./images/common/icon_ipcheck.png" width="33" height="29" alt="IPアドレス確認">
+					</i>
+					<span class="txt">IPアドレス確認</span>
+				</a></li>
+				<li><a href="./env.php">
+					<i class="icon">
+						<img src="./images/common/icon_env.png" width="25" height="25" alt="環境変数確認">
+					</i>
+					<span class="txt">環境変数確認</span>
+				</a></li>
+				<li><a href="./png-transparent.php">
+					<i class="icon">
+						<img src="./images/common/icon_png-transparent.png" width="25" height="25" alt="画像透過ツール">
+					</i>
+					<span class="txt">画像透過ツール</span>
+				</a></li>
+				<li><a href="./ip-adress-search.php">
+					<i class="icon">
+						<img src="./images/common/icon_ip-adress-search.png" width="25" height="25" alt="IPアドレス住所検索">
+					</i>
+					<span class="txt">IPアドレス住所検索</span>
+				</a></li>
+				<li><a href="./lottery.php">
+					<i class="icon">
+						<img src="./images/common/icon_lottery.png" width="25" height="25" alt="くじ引き（抽選ツール）">
+					</i>
+					<span class="txt">くじ引き（抽選ツール）</span>
+				</a></li>
+				<li><a href="./gif-conversion.php">
+					<i class="icon">
+						<img src="./images/common/icon_gif-conversion.png" width="25" height="25" alt="MP4→GIF変換（GIF作成）">
+					</i>
+					<span class="txt">MP4→GIF変換（GIF作成）</span>
+				</a></li>
+				<li><a href="./sql-formatting.php">
+					<i class="icon">
+						<img src="./images/common/icon_sql-formatting.png" width="25" height="25" alt="SQL整形">
+					</i>
+					<span class="txt">SQL整形</span>
+				</a></li>
+				<li><a href="./web-calculator.php">
+					<i class="icon">
+						<img src="./images/common/icon_web-calculator.png" width="25" height="25" alt="WEB電卓">
+					</i>
+					<span class="txt">WEB電卓</span>
+				</a></li>
+				<li><a href="./image-color-picker.php">
+					<i class="icon">
+						<img src="./images/common/icon_image-color-picker.png" width="25" height="25" alt="カラーピッカー">
+					</i>
+					<span class="txt">カラーピッカー</span>
+				</a></li>
+				<li><a href="./base64-encoding-decoding.php">
+					<i class="icon">
+						<img src="./images/common/icon_base64-encoding-decoding.png" width="25" height="25" alt="Base64 エンコード・デコード">
+					</i>
+					<span class="txt">Base64 エンコード・デコード</span>
+				</a></li>
+				<li><a href="./image-resize.php">
+					<i class="icon">
+						<img src="./images/common/icon_image-resize.png" width="25" height="25" alt="画像リサイズ">
+					</i>
+					<span class="txt">画像リサイズ</span>
+				</a></li>
+				<li><a href="./team-division.php">
+					<i class="icon">
+						<img src="./images/common/icon_team-division.png" width="25" height="25" alt="チーム分け・グループ分け">
+					</i>
+					<span class="txt">チーム分け・グループ分け</span>
+				</a></li>
+				<li><a href="./email-existence.php">
+					<i class="icon">
+						<img src="./images/common/icon_email-existence.png" width="25" height="25" alt="メールアドレス存在確認">
+					</i>
+					<span class="txt">メールアドレス存在確認</span>
+				</a></li>
+				<li><a href="./whois.php">
+					<i class="icon">
+						<img src="./images/common/icon_whois.png" width="25" height="25" alt="Whois検索">
+					</i>
+					<span class="txt">Whois検索</span>
+				</a></li>
+				<li><a href="./amidakuji.php">
+					<i class="icon">
+						<img src="./images/common/icon_amidakuji.png" width="25" height="25" alt="あみだくじオンライン">
+					</i>
+					<span class="txt">あみだくじオンライン</span>
+				</a></li>
+				<li><a href="./nslookup.php">
+					<i class="icon">
+						<img src="./images/common/icon_nslookup.png" width="25" height="25" alt="nslookup・DNSサーバー確認">
+					</i>
+					<span class="txt">nslookup・DNSサーバー確認</span>
+				</a></li>
+			</ul>
+		<!-- /#gNav--></div>
+	<!-- /#gNav_wrap --></div>
+
+  <div id="contents_wrap" style="height: auto !important;">
+    <div id="container" style="height: auto !important;">
+      <div id="container_in" style="height: auto !important;">
+        <div id="main" role="main" style="height: auto !important;">
+          <section id="sections_wrap" style="height: auto !important;">
+            <div id="tool_box" style="height: auto !important;">
+              <header class="tool_box_header">
+                <h2 class="tool_box_ttl">
+                  <span class="jp">パスワード生成（パスワード作成）ツール</span>
+                  <span class="en">Randam password generation</span>
+                </h2>
+                <i class="tool_box_icon">
+                  <img src="./images/common/icon_randam.png" width="25" height="35" alt="パスワード生成ツール">
+                </i>
+              <!-- /.tool_box_header --></header>
+              <div class="tool_box_body" style="height: auto !important;">
+                <div class="tool_box_desc">
+                  <p class="pgp">
+お好みのパスワードを生成（自動作成）することができるツールです。<br>
+利用は完全無料です。<br>
+文字数は2～40文字まで、個数は最大1,000個まで生成できます。
+                  </p>
+                <!-- /.tool_box_desc --></div>
+<form method="post" action="randam.php" name="formcheck" style="height: auto !important;">
+                <div class="randam_selects lf">
+                  <dl>
+                    <dt>強度</dt>
+                    <dd>
+                      <div class="check_wrap">
+                        <input type="radio" id="Enable" name="stg" onclick="enable()" value="0">
+                        <i class="shape radio"></i><label class="txt" for="Enable">カスタム</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Disable1" name="stg" onclick="disable()" value="1">
+                        <i class="shape radio"></i><label class="txt" for="Disable1">強力</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Disable2" name="stg" onclick="disable()" value="2" checked="checked">
+                        <i class="shape radio"></i><label class="txt" for="Disable2">最強</label>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>文字</dt>
+                    <dd>
+                      <div class="check_wrap">
+                        <input type="checkbox" id="Cbox0" name="str_style[]" value="0" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox0">英字（大文字）</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="checkbox" id="Cbox1" name="str_style[]" value="1" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox1">英字（小文字）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox2" name="str_style[]" value="2" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox2">数字</label>
+                      </div>
+                      
+                      
+                      
+                      <div class="check_wrap">
+                        <input type="radio" id="Symbol0" name="symbol" value="0" disabled="">
+                        <i class="shape radio"></i><label class="txt" for="Symbol0">記号なし</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Symbol1" name="symbol" value="1" checked="checked" disabled="">
+                        <i class="shape radio"></i><label class="txt" for="Symbol1">記号あり</label>
+                      </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                 <div id="pulldown" class="ope open">
+                      
+                      
+                      
+                      <!--
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox3" name="str_style[]" value="3">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox3">記号</label>
+                      </div>
+                      -->
+                      
+                      
+                      
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox6" name="str_style[]" value="6" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox6">-（ハイフン）</label>
+                      </div>
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox19" name="str_style[]" value="19" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox19">_（アンダーバー）</label>
+                      </div>
+                      
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox4" name="str_style[]" value="4" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox4">/（スラッシュ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox5" name="str_style[]" value="5" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox5">*（アスタリスク）</label>
+                      </div>
+                      
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox7" name="str_style[]" value="7" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox7">+（プラス）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox8" name="str_style[]" value="8" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox8">.（ドット）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox9" name="str_style[]" value="9" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox9">,（カンマ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox10" name="str_style[]" value="10" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox10">!（エクスクラメーション）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox11" name="str_style[]" value="11" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox11">#（シャープ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox12" name="str_style[]" value="12" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox12">$（ドル）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox13" name="str_style[]" value="13" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox13">%（パーセント）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox14" name="str_style[]" value="14" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox14">&amp;（アンド）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox15" name="str_style[]" value="15" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox15">(（左かっこ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox16" name="str_style[]" value="16" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox16">)（右かっこ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox17" name="str_style[]" value="17" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox17">~（チルダ）</label>
+                      </div>
+                      <div class="check_wrap size_s">
+                        <input type="checkbox" id="Cbox18" name="str_style[]" value="18" checked="checked" disabled="">
+                        <i class="shape checkbox"></i><label class="txt" for="Cbox18">|（パイプ）</label>
+                      </div>
+                      
+                      
+                      
+                 </div>
+
+
+
+
+
+
+                      <div class="check_wrap">
+                        <input type="checkbox" id="initialsCbox" name="initial" value="0">
+                        <i class="shape checkbox"></i><label class="txt" for="initialsCbox">頭文字を指定</label>
+                      </div>
+
+					  <div id="InitialSelectArea" class="ope">
+					  	<div class="check_wrap size_s">
+					  		<input type="radio" id="Initials0" name="initial_style" value="0">
+					  		<i class="shape radio"></i><label class="txt" for="Initials0">英字（大文字）</label>
+					  	</div>
+					  	<div class="check_wrap size_s">
+					  		<input type="radio" id="Initials1" name="initial_style" value="1">
+					  		<i class="shape radio"></i><label class="txt" for="Initials1">英字（小文字）</label>
+					  	</div>
+					  	<div class="check_wrap size_s">
+					  		<input type="radio" id="Initials2" name="initial_style" value="2">
+					  		<i class="shape radio"></i><label class="txt" for="Initials2">数字</label>
+					  	</div>
+					  </div>
+
+
+
+
+
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>文字数</dt>
+                    <dd>
+                      <div class="check_wrap plus_form">
+                        <input type="radio" id="Digit0" name="digit" value="0">
+                        <i class="shape radio"></i><input type="number" name="digit_s" value="" onfocus="d_focus()" class="form_txt"><label class="txt" for="Digit0">文字</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Digit2" name="digit" value="8">
+                        <i class="shape radio"></i><label class="txt" for="Digit2">8文字</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Digit3" name="digit" value="12" checked="checked">
+                        <i class="shape radio"></i><label class="txt" for="Digit3">12文字</label>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>個数</dt>
+                    <dd>
+                      <div class="check_wrap plus_form">
+                        <input type="radio" id="Su0" name="su" value="0">
+                        <i class="shape radio"></i><input type="number" name="su_s" value="" onfocus="s_focus()" class="form_txt"><label class="txt" for="Su0">個</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Su2" name="su" value="10">
+                        <i class="shape radio"></i><label class="txt" for="Su2">10個</label>
+                      </div>
+                      <div class="check_wrap">
+                        <input type="radio" id="Su3" name="su" value="50" checked="checked">
+                        <i class="shape radio"></i><label class="txt" for="Su3">50個</label>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>その他</dt>
+                    <dd>
+                      <div class="check_wrap row">
+                        <input type="checkbox" id="Condition0" name="condition[]" value="0" checked="checked">
+                        <i class="shape checkbox"></i><label class="txt" for="Condition0">似通った英数字は省く</label>
+                      </div>
+                      <div class="check_wrap row">
+                        <input type="checkbox" id="Condition1" name="condition[]" value="1" checked="checked">
+                        <i class="shape checkbox"></i><label class="txt" for="Condition1">8文字以内の場合、同じ文字は2回以上使わない</label>
+                      </div>
+                    </dd>
+                  </dl>
+                <!-- /.randam_selects --></div>
+
+<div class="main_adv" style="height: auto !important;">
+	<div class="adv_wrap">
+		<div class="adv">
+<!-- main_adv START -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4697947772204817" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- NEWLUFTTOOLS_responsive_2 -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-4697947772204817" data-ad-slot="1287359418" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" style="border: none; height: 280px; width: 618px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_1" name="aswift_1" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:618px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="618" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=280&amp;slotname=1287359418&amp;adk=2597975396&amp;adf=752410418&amp;pi=t.ma~as.1287359418&amp;w=618&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1715920575&amp;rafmt=1&amp;format=618x280&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575267&amp;bpp=3&amp;bdt=205&amp;idt=193&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=185&amp;ady=718&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7CeoEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;dtd=214" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPmx26Luk4YDFSfETAIdWOgI3w" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- main_adv END -->
+		</div>
+	</div>
+<!-- /.main_adv --></div>
+<input type="hidden" name="submit" value="submit">
+                <button type="submit" class="btn_form btn_submit">生成</button>
+</form>
+<form method="post" action="randam.php">
+<input type="hidden" name="reset" value="reser">
+                <button type="submit" class="btn_form btn_cancel2">リセット</button>
+</form>
+
+<form method="post" action="randam.php">
+<input type="hidden" name="down" value="downer">
+                <button type="submit" class="btn_form btn_download">パスワードデータをダウンロード</button>
+</form>
+<!--
+<p class="exp_txt">
+  ※スマートフォンやタブレットではパスワードデータを開けない場合があります。
+</p>
+-->
+
+
+                <div class="randam_gene_block">
+                  <div class="randam_gene_block_in">
+                    <div class="item_wrap">
+<input type="text" value="Fn8UbH3S3b/V" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="$xd!bn3g_~x_" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="nX7ZTTD-)~~F" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="7RB)ajsfV_zi" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="LsS~rRxEC,9K" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="_+USV8+JHp2r" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="cUvbuS#N*!5~" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="rVHCciL*$*2%" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="%gLN|E4h68R3" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="2-|v%R9C7Pj&amp;" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="T*Hm6hT9!C,L" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="$V-G2$Rdm4UA" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="BDjv)5**wSf-" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="~bKqvUm(!6vm" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="Y+-mBeJC&amp;hA9" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="-j0k/KXZ)%QQ" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="R,Rzvj5F%hyD" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="VXZ!MqU4frPY" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="EbfESnYN)x3v" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="TQMj~*rqKF(5" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="yHJY6Ax/Sfvi" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="FqxThJBH3G.." style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="x-!25!p$y./S" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="gbENA|#Zu5v*" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="*!yKX&amp;)K$.3p" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="&amp;~b%Uw5$|4sg" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="EYZ&amp;.X8,Q%n4" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="xU8xVF54Skfc" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="NXcnsJkjF!z8" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="K~h4T%RKezF," style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="C!5-uB9g6JvA" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="39jPKCdU7-cg" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="aLYDpf*$+Ni2" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="Yemr7KWtj((D" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value=")Wa*sKb(QMs.8" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="/p-8,GYB7PEL" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="sMVzTjkBS6G|" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="WfT+Zeryi2C," style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="#/qTc37b/m|w" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="XDBE$kk1rkyJ" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="jE4!ETshDpvc" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="pMbp%#AZT+0P" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="(.*Ri3txx!DP" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="2hM9YaW6N&amp;Y)" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="5T#pdZ4k.Tw|" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="hZVEis|!3S|L" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="+(2*H$W#PFw3" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="xaMUu8s28/+g" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="iP_sm-hHKS|8" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+<input type="text" value="hQ2da~E2n4i6" style="width:145px;" onclick="this.focus();this.select();copy_fn()" class="form_txt">
+                    <!-- /.item_wrap --></div>
+                  <!-- /.randam_gene_block_in --></div>
+                <!-- /.randam_gene_block --></div>
+                
+                
+<!--
+                <div class="tool_box_add">
+                  <p class="pgp">
+※文字数は2～40文字まで指定できます。
+                  </p>
+                  <p class="pgp">
+※個数は最大1,000個まで生成できます。
+                  </p>
+                </div>
+-->
+
+
+                <div class="tool_box_add">
+                  <p class="pgp">
+※選択された文字はクリップボードにコピーされます。
+                  </p>
+                </div>
+
+
+
+              <!-- /.tool_box_body --></div>
+            <!-- /#tool_box --></div>
+            <section class="sec">
+              <header class="sec_header">
+                <h3 class="sec_ttl">
+                  <span class="txt">使い方</span>
+                </h3>
+              </header>
+              <div class="sec_body">
+                <div class="txt_wrap">
+                  <p class="pgp">
+お好みのパスワードを生成（自動作成）することができるツールです。<br>
+パスワードに使用する文字の種類（数字、英文字、記号）、文字数の長さ、生成する個数を指定可能です。<br>
+ご希望のセキュリティ強度、文字、文字数、個数がございましたらご入力、ご選択後に「生成」ボタンをクリックしてください。<br>
+再度、「生成」ボタンを押すことで新しいパスワードが生成されます。<br>
+<span class="pc_view">
+※生成されたパスワードはテキストファイルにてダウンロード可能です。<br>
+「パスワードデータをダウンロード」ボタンをクリックしてダウンロードしてください。<br>
+</span>
+<span class="sp_view">
+※スマートフォンやタブレットでご利用の方は、生成されたパスワードを直接コピーしてご利用ください。<br>
+</span>
+※文字数は最大40文字まで、個数は最大1000個までとなります。<br>
+※文字の「記号あり」で任意の記号が選択可能になりました。<br>
+※文字の「頭文字の指定」で頭文字に「英字（大文字）」「英字（小文字）」「数字」が選択可能になりました。<br>
+
+                  </p>
+                </div>
+              <!-- /.sec_body --></div>
+            <!-- /.sec --></section>
+            <section class="sec">
+              <header class="sec_header">
+                <h3 class="sec_ttl">
+                  <span class="txt">その他「似通った英数字は省く」について</span>
+                </h3>
+              </header>
+              <div class="sec_body">
+                <div class="txt_wrap">
+                  <p class="pgp">
+「似通った英数字は省く」にチェックいただくことで以下の文字は生成されるパスワードに含まれなくなります。<br>
+I = 英字（大文字）のアイ<br>
+l = 英字（小文字）のエル<br>
+1 = 数字のいち
+                  </p>
+                  <p class="pgp">
+O = 英字（大文字）のオー<br>
+o = 英字（小文字）のオー<br>
+0 = 数字のゼロ
+                  </p>
+                </div>
+              <!-- /.sec_body --></div>
+            <!-- /.sec --></section>
+            <section class="sec">
+              <header class="sec_header">
+                <h3 class="sec_ttl">
+                  <span class="txt">記号文字について</span>
+                </h3>
+              </header>
+              <div class="sec_body">
+                <div class="txt_wrap">
+                  <p class="pgp">
+本ツールでは以下の記号文字を使用しております。<br>
+/*-+.,!#$%&amp;()~|_
+                  </p>
+                </div>
+              <!-- /.sec_body --></div>
+            <!-- /.sec --></section>
+            <div class="notes">
+              <p class="pgp">
+※このプログラムはPHP8.1.22にて作成、動作確認を行っております。<br>
+※ご利用下さっている皆様の
+<a href="https://www.luft.co.jp/contact/" target="_blank">ご意見・ご要望をお寄せください。</a>
+              </p>
+            <!-- /.notes --></div>
+          <!-- /#sections_wrap --></section>
+        <!-- /#main --></div>
+
+				<div id="side" style="height: auto !important;">
+
+					<aside class="side_adv">
+						<div class="adv_wrap">
+							<div class="adv square">
+<!-- side_adv START -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4697947772204817" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- NEWLUFTTOOLS_300_250_1 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4697947772204817" data-ad-slot="6714930002" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_2" name="aswift_2" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=250&amp;slotname=6714930002&amp;adk=3935161689&amp;adf=1508948090&amp;pi=t.ma~as.6714930002&amp;w=300&amp;abgtt=6&amp;lmt=1715920575&amp;format=300x250&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575270&amp;bpp=3&amp;bdt=207&amp;idt=253&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0%2C618x280&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=871&amp;ady=173&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7CeoE%7C&amp;abl=CS&amp;pfx=0&amp;fu=0&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=3&amp;uci=a!3&amp;fsb=1&amp;dtd=273" data-google-container-id="a!3" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPad2KLuk4YDFYMJewcdJrQONg" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- side_adv END -->
+							</div>
+						</div>
+					<!-- /.side_adv --></aside>
+
+					<nav id="sNav" style="height: auto !important;">
+						<header class="side_header">
+							<h2 class="ttl">
+								<span class="txt">人気のツール</span>
+							</h2>
+						<!-- /.side_header --></header>
+						<div class="side_body">
+							<ul id="sNav_list">
+								<li>
+									<a href="./randam.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_randam.png" width="23" height="32" alt="パスワード生成">
+											</i><span class="txt">パスワード生成</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_randam.png" width="23" height="32" alt="パスワード生成">
+											</i><span class="txt">パスワード生成</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./str_counter.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_str_counter.png" width="31" height="28" alt="文字数カウント">
+											</i><span class="txt">文字数カウント</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_str_counter.png" width="31" height="28" alt="文字数カウント">
+											</i><span class="txt">文字数カウント</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./lottery.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_lottery.png" width="25" height="25" alt="くじ引き（抽選ツール）">
+											</i><span class="txt">くじ引き（抽選ツール）</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_lottery.png" width="25" height="25" alt="くじ引き（抽選ツール）">
+											</i><span class="txt">くじ引き（抽選ツール）</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./htpasswd.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_htpasswd.png" width="22" height="29" alt=".htpasswd ファイル作成">
+											</i><span class="txt">.htpasswd ファイル作成</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_htpasswd.png" width="22" height="29" alt=".htpasswd ファイル作成">
+											</i><span class="txt">.htpasswd ファイル作成</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="./web-calculator.php">
+										<p class="item_wrap front">
+											<i class="icon">
+												<img src="./images/common/icon_web-calculator.png" width="25" height="25" alt="WEB電卓">
+											</i><span class="txt">WEB電卓</span>
+										</p>
+										<p class="item_wrap rear">
+											<i class="icon">
+												<img src="./images/common/icon_web-calculator.png" width="25" height="25" alt="WEB電卓">
+											</i><span class="txt">WEB電卓</span>
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div><div class="google-auto-placed" style="width: 100%; height: auto; clear: none; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-4697947772204817" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 100px;" data-ad-status="filled"><div id="aswift_5_host" style="border: none; height: 100px; width: 332px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_5" name="aswift_5" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:332px;height:100px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="332" height="100" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=100&amp;adk=3389041745&amp;adf=745618994&amp;pi=t.aa~a.2273067071~rp.4&amp;w=332&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1715920576&amp;rafmt=1&amp;to=qs&amp;pwprc=7473214062&amp;format=332x100&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fwr=0&amp;pra=3&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=40&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920576037&amp;bpp=2&amp;bdt=974&amp;idt=2&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0%2C618x280%2C300x250%2C300x600%2C1349x641&amp;nras=3&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=855&amp;ady=878&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=6&amp;uci=a!6&amp;btvi=3&amp;fsb=1&amp;dtd=31" data-google-container-id="a!6" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CNy19aLuk4YDFUvGFgUd0v8NdQ" data-load-complete="true"></iframe></div></ins></div>
+					<aside class="side_adv" style="height: auto !important;">
+						<div class="adv_wrap" style="height: auto !important;">
+							<div class="adv">
+<!-- side_adv START -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4697947772204817" crossorigin="anonymous" data-checked-head="true"></script>
+<!-- NEWLUFTTOOLS_responsive_1 -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-4697947772204817" data-ad-slot="8223452795" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_3_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;h=600&amp;slotname=8223452795&amp;adk=187729176&amp;adf=3963961529&amp;pi=t.ma~as.8223452795&amp;w=300&amp;abgtt=6&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1715920575&amp;rafmt=1&amp;format=300x600&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=4&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575290&amp;bpp=8&amp;bdt=228&amp;idt=290&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;prev_fmts=0x0%2C618x280%2C300x250&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=1&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=871&amp;ady=884&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7CeoEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=4&amp;uci=a!4&amp;btvi=2&amp;fsb=1&amp;dtd=300" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPup2KLuk4YDFVrDTAIdRGgJCA" data-load-complete="true"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- side_adv END -->
+							</div>
+						</div>
+					<!-- /.side_adv --></aside>
+							<div class="side_list">
+							<p class="side_list_menu_title">ITツールメニュー</p>
+							<ul>
+							<li><a href="./randam.php"><span class="txt">パスワード生成</span></a></li>
+							<li><a href="./htpasswd.php"><span class="txt">.htpasswdファイル生成</span></a></li>
+							<li><a href="./coding.php"><span class="txt">メールアドレス暗号化</span></a></li>
+							<li><a href="./str_counter.php"><span class="txt">文字数カウント</span></a></li>
+							<li><a href="./ipcheck.php"><span class="txt">IPアドレス確認</span></a></li>
+							<li><a href="./env.php"><span class="txt">環境変数確認</span></a></li>
+							<li><a href="./png-transparent.php"><span class="txt">画像透過ツール</span></a></li>
+							<li><a href="./ip-adress-search.php"><span class="txt">IPアドレス住所検索</span></a></li>
+							<li><a href="./lottery.php"><span class="txt">くじ引き（抽選ツール）</span></a></li>
+							<li><a href="./gif-conversion.php"><span class="txt">MP4→GIF変換（GIF作成）</span></a></li>
+							<li><a href="./sql-formatting.php"><span class="txt">SQL整形</span></a></li>
+							<li><a href="./web-calculator.php"><span class="txt">WEB電卓</span></a></li>
+							<li><a href="./image-color-picker.php"><span class="txt">カラーピッカー</span></a></li>
+							<li><a href="./base64-encoding-decoding.php"><span class="txt">Base64 エンコード・デコード</span></a></li>
+							<li><a href="./image-resize.php"><span class="txt">画像リサイズ</span></a></li>
+							<li><a href="./team-division.php"><span class="txt">チーム分け・グループ分け</span></a></li>
+							<li><a href="./email-existence.php"><span class="txt">メールアドレス存在確認</span></a></li>
+							<li><a href="./whois.php"><span class="txt">Whois検索</span></a></li>
+							<li><a href="./amidakuji.php"><span class="txt">あみだくじオンライン</span></a></li>
+							<li><a href="./nslookup.php"><span class="txt">nslookup・DNSサーバー確認</span></a></li>
+							</ul>
+							<!-- /#sNav_list -->
+						<!-- /.side_body --></div>
+					<!-- /#sNav --></nav>
+
+
+
+<!--
+					<section id="news">
+						<header class="side_header">
+							<h2 class="ttl">
+								<span class="txt">News ＆ Topics</span>
+								<a href="./rss.xml" class="rss">
+									<img src="./images/common/btn_rss.png" width="52" height="22" alt="RSS">
+								</a>
+							</h2>
+						</header>
+						<div class="side_body">
+							<ul id="news_list">
+								<li>
+									<p class="date">2016.01.08</p>
+									<div class="txt_wrap">
+<p>
+「ルフトツールズ（LUFTTOOLS）｜Web制作・開発者のためのWeb便利ツール集」は、もっと便利に快適に使えるように、随時バージョンアップを行ってまいりますので、ご利用くださっている皆さまのご意見・ご要望・ご感想をお待ちしております。
+</p>
+									</div>
+								</li>
+								<li>
+									<p class="date">2012.12.06</p>
+									<div class="txt_wrap">
+<p>
+<a href="./randam.php">パスワード生成のテキストボックスを自由入力に変更しました。</a>
+</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+-->
+				<!-- /#side --></div>
+
+
+      <!-- /#container_in --></div>
+    <!-- /#container --></div>
+    <div id="clearance">
+      <div id="clearance_in">
+        <nav id="topicPath">
+					<ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+							<a href="./" class="txt home" itemprop="item">
+								<span itemprop="name">HOME</span>
+							</a>
+							<meta itemprop="position" content="1">
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+							<a href="./randam.php" class="txt" itemprop="item">
+								<span itemprop="name">パスワード生成（パスワード作成）ツール</span>
+							</a>
+							<meta itemprop="position" content="2">
+						</li>
+					</ol>
+        <!-- /#topicPath --></nav>
+        <p id="pageTop">
+          <a href="#wrapper" class="scroll">
+            <span class="front">PAGE TOP</span><span class="rear">PAGE TOP</span>
+          </a>
+        </p>
+      <!-- /#clearance_in --></div>
+    <!-- /#clearance --></div>
+
+		<footer id="footer">
+			<div id="footer_top">
+				<p id="fLogo"><img src="./images/common/flogo.png" width="161" height="27" alt="ルフトツールズ（LUFTTOOLS） Web便利ツール集"></p>
+				<div id="fNav_wrap">
+					<div id="fNav">
+						<ul>
+							<li><a href="./"><span class="txt">HOME</span></a></li>
+							<li><a href="./randam.php"><span class="txt">パスワード生成</span></a></li>
+							<li><a href="./htpasswd.php"><span class="txt">.htpasswdファイル生成</span></a></li>
+							<li><a href="./coding.php"><span class="txt">メールアドレス暗号化</span></a></li>
+							<li><a href="./str_counter.php"><span class="txt">文字数カウント</span></a></li>
+							<li><a href="./ipcheck.php"><span class="txt">IPアドレス確認</span></a></li>
+							<li><a href="./env.php"><span class="txt">環境変数確認</span></a></li>
+							<li><a href="./png-transparent.php"><span class="txt">画像透過ツール</span></a></li>
+							<li><a href="./ip-adress-search.php"><span class="txt">IPアドレス住所検索</span></a></li>
+							<li><a href="./lottery.php"><span class="txt">くじ引き（抽選ツール）</span></a></li>
+							<li><a href="./gif-conversion.php"><span class="txt">MP4→GIF変換（GIF作成）</span></a></li>
+							<li><a href="./sql-formatting.php"><span class="txt">SQL整形</span></a></li>
+							<li><a href="./web-calculator.php"><span class="txt">WEB電卓</span></a></li>
+							<li><a href="./image-color-picker.php"><span class="txt">カラーピッカー</span></a></li>
+							<li><a href="./base64-encoding-decoding.php"><span class="txt">Base64 エンコード・デコード</span></a></li>
+							<li><a href="./image-resize.php"><span class="txt">画像リサイズ</span></a></li>
+							<li><a href="./team-division.php"><span class="txt">チーム分け・グループ分け</span></a></li>
+							<li><a href="./email-existence.php"><span class="txt">メールアドレス存在確認</span></a></li>
+							<li><a href="./whois.php"><span class="txt">Whois検索</span></a></li>
+							<li><a href="./amidakuji.php"><span class="txt">あみだくじオンライン</span></a></li>
+							<li><a href="./nslookup.php"><span class="txt">nslookup・DNSサーバー確認</span></a></li>
+						</ul>
+						<ul>
+							<!--<li><a href="./adv.html"><span class="txt">広告掲載について</span></a></li>-->
+							<li><a href="./exept.html"><span class="txt">免責事項について</span></a></li>
+							<li><a href="https://www.luft.co.jp/" target="_blank">お問い合わせ</a></li>
+							<li><a href="./sitemap.html"><span class="txt">サイトマップ</span></a></li>
+							<li><a href="./commerce.html"><span class="txt">特定商取引法に基づく表記</span></a></li>
+							<li><a href="https://www.luft.co.jp/media/" target="_blank">LUFTMEDIA</a></li>
+						</ul>
+					<!-- /#fNav --></div>
+					<div id="fIcons">
+						<ul>
+<!--
+							<li><a href="./rss.xml"><img src="./images/common/icon_frss.png" width="36" height="36" alt="RSS"></a></li>
+-->
+
+							<li><a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),null,'width=550,height=400');return false;"><img src="./images/common/icon_ffb.png" width="36" height="36" alt="Facebook"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('https://twitter.com/share?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.getElementsByName('description').item(0).content),'twitter','toolbar=no,width=550,height=300');return false;"><img src="./images/common/icon_ftw.png" width="36" height="36" alt="Twitter"></a></li>
+
+						</ul>
+					</div>
+				<!-- /#fNav_wrap --></div>
+			<!-- /#footer_top --></div>
+			<div id="footer_btm">
+				<small id="copyright">Copyright(C)2009 SAVEE,INC. All right reserved.</small>
+			<!-- /#footer_btm --></div>
+		<!-- /#footer --></footer>
+
+  <!-- /#contents_wrap --></div>
+<!-- /#wrapper --></div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4697947772204817&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;abgtt=6&amp;lmt=1715920575&amp;plat=1%3A1024%2C2%3A16778240%2C3%3A2097152%2C4%3A2097152%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;pra=5&amp;wgl=1&amp;easpi=0&amp;aihb=0&amp;asro=0&amp;aslmct=0.7&amp;asamct=0.7&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTI0LjAuNjM2Ny4yMDgiLG51bGwsMCxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxMjQuMC42MzY3LjIwOCJdLFsiR29vZ2xlIENocm9tZSIsIjEyNC4wLjYzNjcuMjA4Il0sWyJOb3QtQS5CcmFuZCIsIjk5LjAuMC4wIl1dLDBd&amp;dt=1715920575256&amp;bpp=11&amp;bdt=194&amp;idt=66&amp;shv=r20240515&amp;mjsv=m202405150101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Df69d97ea0d13dab0%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_Ma0CECOTxQxvK1klR5CQY2dxUJjww&amp;gpic=UID%3D00000e2051d4b253%3AT%3D1715920560%3ART%3D1715920560%3AS%3DALNI_MZnlueCieu4WnoZxYUxsHOCpQRzNg&amp;eo_id_str=ID%3D453a4b595a2980f5%3AT%3D1715920560%3ART%3D1715920560%3AS%3DAA-Afjbhg1Xc3DedQ_kAsEi4w4t-&amp;nras=1&amp;correlator=5144868308361&amp;frm=20&amp;pv=2&amp;ga_vid=1582058200.1715920561&amp;ga_sid=1715920575&amp;ga_hid=1621089933&amp;ga_fc=1&amp;u_tz=540&amp;u_his=4&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1349&amp;bih=641&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31083360%2C31083586%2C31083589%2C95331687%2C95331983%2C95332923%2C31083749%2C95331711%2C95332415%2C21065725%2C31078663%2C31078665%2C31078668%2C31078670&amp;oid=2&amp;pvsid=2740633798668294&amp;tmod=928965343&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;ref=https%3A%2F%2Fwww.luft.co.jp%2Fcgi%2Frandam.php&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C641&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;td=1&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;nt=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=118" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins>
+<script src="./js/core.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/TweenMax.min.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/disable.js"></script>
+
+<!-- analyze -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJC3TTJV');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJC3TTJV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- /analyze -->
+
+
+<iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body>
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><div id="aswift_4_host" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_4" name="aswift_4" browsingtopics="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20240515/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-4697947772204817&amp;fa=8&amp;ifi=5&amp;uci=a!5" data-google-container-id="a!5" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CKyl2KLuk4YDFfOBuQUdNGEOXQ" data-load-complete="true"></iframe></div></ins>
+</html>

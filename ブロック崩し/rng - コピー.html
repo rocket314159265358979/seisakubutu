@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>確率が低い名前当てゲーム</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function roll() {
+            let randomNumber = Math.random();
+            let name = "";
+
+            if (randomNumber < 0.35) { name = "龍刃"; }
+            else if (randomNumber < 0.4) { name = "神威剣"; }
+            else if (randomNumber < 0.45) { name = "紅蓮剣"; }
+            else if (randomNumber < 0.5) { name = "天鎧剣"; }
+            else if (randomNumber < 0.55) { name = "真実剣"; }
+            else if (randomNumber < 0.6) { name = "焔剣"; }
+            else if (randomNumber < 0.65) { name = "妖刀・血楓"; }
+            else if (randomNumber < 0.7) { name = "不滅剣"; }
+            else if (randomNumber < 0.75) { name = "雷神剣"; }
+            else if (randomNumber < 0.8) { name = "神速剣"; }
+            else if (randomNumber < 0.85) { name = "暗黒剣"; }
+            else if (randomNumber < 0.9) { name = "咆哮剣"; }
+            else if (randomNumber < 0.95) { name = "絶対剣"; }
+            else { name = "普通の名前"; }
+
+            document.getElementById("result").textContent = `当たった名前: ${name}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>確率が低い名前当てゲーム</h1>
+    <button onclick="roll()">Roll</button>
+    <p id="result"></p>
+</body>
+</html>

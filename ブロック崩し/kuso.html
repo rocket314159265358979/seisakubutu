@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>個別にパイナップルを削除するページ</title>
+    <style>
+        .fruit {
+            position: absolute;
+            font-size: 24px;
+            color: green;
+        }
+        .deleteButton {
+            display: inline-block;
+            margin-left: 8px;
+        }
+        #container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+        }
+        #deleteAllButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="deleteAllButton">全てのパイナップルと削除ボタンを削除</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let container = document.getElementById('container');
+            let deleteAllButton = document.getElementById('deleteAllButton');
+
+            function createRandomPosition() {
+                return {
+                    left: Math.floor(Math.random() * container.offsetWidth),
+                    top: Math.floor(Math.random() * container.offsetHeight)
+                };
+            }
+
+            function createPineapple() {
+                let position = createRandomPosition();
+                let pineapple = document.createElement('div');
+                pineapple.textContent = '🍍'; // パイナップルの絵文字
+                pineapple.classList.add('fruit');
+                pineapple.style.left = position.left + 'px';
+                pineapple.style.top = position.top + 'px';
+
+                let deleteButton = document.createElement('button');
+                deleteButton.textContent = '削除';
+                deleteButton.classList.add('deleteButton');
+                deleteButton.addEventListener('click', function() {
+                    pineapple.remove();
+                    deleteButton.remove();
+                });
+
+                container.appendChild(pineapple);
+                container.appendChild(deleteButton);
+            }
+
+            function deleteAllPineapples() {
+                let pineapples = document.querySelectorAll('.fruit');
+                let deleteButtons = document.querySelectorAll('.deleteButton');
+                
+                pineapples.forEach(pineapple => {
+                    pineapple.remove();
+                });
+                
+                deleteButtons.forEach(deleteButton => {
+                    deleteButton.remove();
+                });
+            }
+
+            setInterval(createPineapple, 100); // 1000ミリ秒ごとにパイナップルを生成
+
+            deleteAllButton.addEventListener('click', function() {
+                deleteAllPineapples();
+                deleteAllButton.remove();
+            });
+        });
+    </script>
+</body>
+</html>

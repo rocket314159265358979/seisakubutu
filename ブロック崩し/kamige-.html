@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>連打ゲーム</title>
+</head>
+<body>
+    <h1>連打ゲーム</h1>
+    <p>スコア: <span id="score">0</span></p>
+    <p>累計クリック数: <span id="totalClicks">0</span></p>
+    <p>クリックごとのスコア増加量: <span id="increment">1</span></p>
+    <p>次のアップグレードまでの必要スコア: <span id="upgradeCost">10</span></p>
+    <button id="clickButton" onclick="increaseScore()">クリック！</button>
+    <button id="upgradeButton" onclick="buyUpgrade()">アップグレード</button>
+    <br>
+    <label for="password">パスワード： </label>
+    <input type="password" id="password" onkeydown="checkPassword(event)">
+
+    <script>
+        let score = 0;
+        let increment = 1;
+        let upgradeCost = 10;
+        let totalClicks = 0;
+
+        function increaseScore() {
+            score += increment;
+            totalClicks++;
+            document.getElementById('score').textContent = score;
+            document.getElementById('totalClicks').textContent = totalClicks;
+        }
+
+        function buyUpgrade() {
+            if (score >= upgradeCost) {
+                score -= upgradeCost;
+                increment++;
+                document.getElementById('score').textContent = score;
+                document.getElementById('increment').textContent = increment;
+                upgradeCost += 2;
+                document.getElementById('upgradeCost').textContent = upgradeCost;
+            } else {
+                alert('スコアが不足しています！');
+            }
+        }
+
+        function checkPassword(event) {
+            if (event.key === 'Enter') {
+                const password = document.getElementById('password').value;
+                if (password === 'rocket') {
+                    setInterval(function() {
+                        increaseScore();
+                    }, 10);
+                } else if (password === 'hibitani') {
+                    increment += 99999;
+                    document.getElementById('increment').textContent = increment;
+                }
+                document.getElementById('password').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
